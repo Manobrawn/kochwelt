@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../../img/logo_small.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="rezepte.css" />
+        <link rel="stylesheet" href="../../index.css" />
+        <script src="rezepte.js" defer></script>
+        <script src="../../header.js" defer></script>
+        <title>Apfelstrudel</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../index.html"
+                    ><img src="../../img/logo.png" alt="Kochwelt Logo"
+                /></a>
+
+                <menu class="burger-menu hidden">
+                    <button
+                        onclick="toggleClass('.burger-menu-dropdown', 'hidden')"
+                        class="burger-menu-btn"
+                    >
+                        ☰
+                    </button>
+                    <ul class="burger-menu-dropdown dropdown-container hidden">
+                        <li>
+                            <a class="green-underline" href="../../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown-burger', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown-burger"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="../rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+                <menu>
+                    <ul id="nav-ul">
+                        <li>
+                            <a class="green-underline" href="../../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="../rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+            <section class="top-section">
+                <h1>Apfelstrudel</h1>
+                <img
+                    class="main-img apfelstrudel"
+                    src="../../img/Apfelstrudel.png"
+                    alt="header Apfelstrudel image"
+                />
+                <div class="icons-container">
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">15 min</time>
+                    </span>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/brain-solid.svg"
+                            alt="Gehirn icon für Zubereitungsschwierigkeit"
+                        />
+                        <p>Simpel</p>
+                    </span>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/calendar-alt-regular.svg"
+                            alt="Calendar icon für Postdatum"
+                        />
+                        <time datetime="2024-11-18">16.11.2024</time>
+                    </span>
+                </div>
+            </section>
+            <hr />
+            <section class="ingridients">
+                <label for="input-portions">Zutaten für</label>
+                <input
+                    type="number"
+                    name="input-portions"
+                    id="input-portions"
+                    max="10"
+                    min="1"
+                    value="1"
+                    required
+                />
+                <button onclick="handleClickAndEnterEvents()">Portionen</button>
+                <ul>
+                    <li><span class="ingridient-quantity">250</span>g Mehl</li>
+                    <li><span class="ingridient-quantity">1</span>g Salz</li>
+                    <li><span class="ingridient-quantity">1</span>g Öl</li>
+                    <li>
+                        <span class="ingridient-quantity">100</span>ml Wasser
+                        (lauwarm)
+                    </li>
+                    <li><span class="ingridient-quantity">1</span>kg Äpfel</li>
+                    <li>
+                        <span class="ingridient-quantity">100</span>g Rosinen
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">50</span>Semmelbrösel
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">50</span>g Zucker
+                        <span class="ingridient-quantity">50</span>g Pinienkerne
+                    </li>
+                </ul>
+            </section>
+            <section class="zubereitung">
+                <h2>Zubereitung</h2>
+                <div>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">ca. 15 Minuten</time> </span
+                    ><span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">Gesamtzeit ca. 15 Minuten</time>
+                    </span>
+                </div>
+                <p>
+                    Teig zubereiten: Alle Zutaten für den Teig zu einem glatten
+                    Teig verkneten und für etwa 30 Minuten ruhen lassen.
+                </p>
+                <p>
+                    Füllung vorbereiten: Äpfel schälen, entkernen und in dünne
+                    Scheiben schneiden. Rosinen in heißem Wasser einweichen.
+                    Semmelbrösel in einer Pfanne goldbraun rösten. Äpfel,
+                    Rosinen, Semmelbrösel, Zucker, Pinienkerne, Zimt und
+                    Zitronensaft vermischen.
+                </p>
+                <p>
+                    Strudel formen: Teig auf einer bemehlten Fläche dünn
+                    ausrollen. Die Füllung gleichmäßig auf dem Teig verteilen
+                    und dabei einen Rand frei lassen. Strudel aufrollen: Den
+                    Teig von der langen Seite her aufrollen und die Enden gut
+                    verschließen.
+                </p>
+                <p>
+                    Backen: Den Strudel auf ein mit Backpapier ausgelegtes
+                    Backblech legen und mit geschmolzener Butter bestreichen. Im
+                    vorgeheizten Ofen bei 180°C ca. 45-50 Minuten backen.
+                    Servieren: Den fertigen Strudel mit Puderzucker bestreuen
+                    und warm servieren.
+                </p>
+            </section>
+
+            <section class="author">
+                <h3>Rezept erstellt von</h3>
+                <figure>
+                    <img
+                        width="80px"
+                        src="../../img/profilbild.jpg"
+                        alt="Profilbild des Erstellers des Inhalts"
+                    />
+                    <figcaption>Asim T.</figcaption>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#top"
+                ><img src="../../img/logo.png" alt="Kochwelt Logo Image"
+            /></a>
+
+            <div>
+                <a href="#"
+                    ><img src="../../img/facebook.png" alt="Facebook Logo"
+                /></a>
+                <a href="#"
+                    ><img src="../../img/instagram.png" alt="Instagram Logo"
+                /></a>
+                <a href="#"
+                    ><img src="../../img/twitter.png" alt="Twitter Logo"
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>

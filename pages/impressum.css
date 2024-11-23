@@ -1,0 +1,28 @@
+.impressum-design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+    padding-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .datenschutz-design {
+        padding: 0 60px;
+    }
+
+    .datenschutz-design p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .datenschutz-design {
+        padding: 0 40px;
+    }
+
+    .datenschutz-design p {
+        font-size: 15px;
+    }
+}

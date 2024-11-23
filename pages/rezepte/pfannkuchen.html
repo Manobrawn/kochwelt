@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+        rel="shortcut icon"
+        href="../../img/logo_small.png"
+        type="image/x-icon"
+    />
+        <link rel="stylesheet" href="rezepte.css" />
+        <link rel="stylesheet" href="../../index.css" />
+        <script src="rezepte.js" defer></script>
+        <script src="../../header.js" defer></script>
+        <title>Pfannkuchen</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../index.html"
+                    ><img src="../../img/logo.png" alt="Kochwelt Logo"
+                /></a>
+
+                <menu class="burger-menu hidden">
+                    <button
+                        onclick="toggleClass('.burger-menu-dropdown', 'hidden')"
+                        class="burger-menu-btn"
+                    >
+                        ☰
+                    </button>
+                    <ul class="burger-menu-dropdown dropdown-container hidden">
+                        <li>
+                            <a class="green-underline" href="../../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown-burger', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown-burger"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="../rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+                <menu>
+                    <ul id="nav-ul">
+                        <li>
+                            <a class="green-underline" href="../../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="../rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="../impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+            <section class="top-section">
+                <h1>Pfannkuchen</h1>
+                <img
+                    class="main-img"
+                    src="../../img/pfannenkuchen.jpg"
+                    alt="header pfannenkuchen image"
+                />
+                <div class="icons-container">
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">15 min</time>
+                    </span>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/brain-solid.svg"
+                            alt="Gehirn icon für Zubereitungsschwierigkeit"
+                        />
+                        <p>Simpel</p>
+                    </span>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/calendar-alt-regular.svg"
+                            alt="Calendar icon für Postdatum"
+                        />
+                        <time datetime="2024-11-18">29.10.2024</time>
+                    </span>
+                </div>
+            </section>
+            <hr />
+            <section class="ingridients">
+                <label for="input-portions">Zutaten für</label>
+                <input
+                    type="number"
+                    name="input-portions"
+                    id="input-portions"
+                    max="10"
+                    min="1"
+                    value="1"
+                    required
+                />
+                <button onclick="handleClickAndEnterEvents()">Portionen</button>
+                <ul>
+                    <li>
+                        <span class="ingridient-quantity">200</span>ml Milch
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">1</span>g Zucker
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">2</span> Eier
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">60</span>ml Mineralwasser
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">200</span>g Mehl
+                    </li>
+                    <li>
+                        <span class="ingridient-quantity">1</span>g Salz
+                    </li>
+            </section>
+            <section class="zubereitung">
+                <h2>Zubereitung</h2>
+                <div>
+                    <span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">ca. 15 Minuten</time> </span
+                    ><span>
+                        <img
+                            width="15px"
+                            src="../../img/icons/clock-regular.svg"
+                            alt="Uhr icon für Zubereitungszeit"
+                        />
+                        <time datetime="PT45M">Gesamtzeit ca. 15 Minuten</time>
+                    </span>
+                </div>
+                <p>
+                    1.Schritt <br />
+                    2 Eier 200 ml Milch 1 Prise Zucker 1 Prise Salz 200 g Mehl
+                    60 ml Mineralwasser
+                </p>
+                <p>
+                    Eier mit Milch, Zucker, Salz, Mehl und Mineralwasser zu
+                    einem glatten Teig rühren.<br />
+                    Bei Bedarf noch etwas Mehl oder Wasser hinzugeben, um die
+                    gewünschte Konsistenz zu erreichen.
+                </p>
+                <p>
+                    2.Schritt<br />
+                    Eine beschichtete Pfanne mit etwas Speiseöl erhitzen. Mit
+                    einer Schöpfkelle eine Kelle Teig in die Pfanne geben und
+                    die Pfanne kurz in jede Richtung schwenken um den Teig zu
+                    verteilen.<br />
+                    Den Pfannkuchen von beiden Seiten etwa 1-2 Minuten bräunlich
+                    ausbacken. Warm genießen.
+                </p>
+            </section>
+        
+            <section class="author">
+                <h3>Rezept erstellt von</h3>
+                <figure>
+                    <img
+                        width="80px"
+                        src="../../img/cetin.t.jpg"
+                        alt="Profilbild des Erstellers des Inhalts"
+                    />
+                    <figcaption>Cetin Toker</figcaption>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#top"><img src="../../img/logo.png" alt="Kochwelt Logo Image" /></a>
+
+            <div>
+                <a href="#"><img src="../../img/facebook.png" alt="Facebook Logo" /></a>
+                <a href="#"><img src="../../img/instagram.png" alt="Instagram Logo" /></a>
+                <a href="#"><img src="../../img/twitter.png" alt="Twitter Logo" /></a>
+            </div>
+        </footer>
+    </body>
+</html>

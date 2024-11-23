@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0,minimum-scale=1"
+        />
+        <title>Kontakt</title>
+        <link rel="stylesheet" type="text/css" href="kontakt.css" />
+        <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+        <link rel="stylesheet" href="../index.css" />
+        <script src="../header.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html"
+                    ><img src="../img/logo.png" alt="Kochwelt Logo"
+                /></a>
+
+                <menu class="burger-menu hidden">
+                    <button
+                        onclick="toggleClass('.burger-menu-dropdown', 'hidden')"
+                        class="burger-menu-btn"
+                    >
+                        ☰
+                    </button>
+                    <ul class="burger-menu-dropdown dropdown-container hidden">
+                        <li>
+                            <a class="green-underline" href="../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown-burger', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown-burger"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="./rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="./kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="./impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+                <menu>
+                    <ul id="nav-ul">
+                        <li>
+                            <a class="green-underline" href="../index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="./rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffel Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="green-underline" href="./kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a class="green-underline" href="./impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+            </nav>
+        </header>
+
+        <main class="kontaktMain">
+            <section class="kontaktBereich maxBreite">
+                <h1 id="formularUeberschrift">
+                    Hinterlasse uns eine Nachricht.
+                </h1>
+                <form
+                    class="kontaktForm"
+                    onsubmit="return nachrichtSenden(event)"
+                >
+                    <label for="email">Dein Name:</label>
+                    <input
+                        type=""
+                        id="contact-name"
+                        name="contact-name"
+                        required
+                    />
+
+                    <label for="email">Deine E-Mail:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="nachricht">Deine Nachricht:</label>
+                    <textarea
+                        id="nachricht"
+                        name="nachricht"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="knopf knopfSenden">
+                        Senden
+                    </button>
+                </form>
+                <br /><br /><br /><br />
+
+                <div id="nachrichtEingegangen" class="versteckt">
+                    <h2>Vielen Dank für Ihre Nachricht.</h2>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#top"
+                ><img src="../img/logo.png" alt="Kochwelt Logo Image"
+            /></a>
+
+            <div>
+                <a href="#"
+                    ><img src="../img/facebook.png" alt="Facebook Logo"
+                /></a>
+                <a href="#"
+                    ><img src="../img/instagram.png" alt="Instagram Logo"
+                /></a>
+                <a href="#"
+                    ><img src="../img/twitter.png" alt="Twitter Logo"
+                /></a>
+            </div>
+        </footer>
+
+        <script>
+            function nachrichtSenden(event) {
+                event.preventDefault();
+
+                document.getElementById("formularUeberschrift").innerText =
+                    "Vielen Dank für Ihre Nachricht.";
+
+                document
+                    .querySelector(".kontaktForm")
+                    .classList.add("versteckt");
+                document
+                    .getElementById("nachrichtEingegangen")
+                    .classList.remove("versteckt");
+
+                event.target.reset();
+            }
+        </script>
+    </body>
+</html>

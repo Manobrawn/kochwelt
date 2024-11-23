@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kochwelt</title>
+        <link
+            rel="shortcut icon"
+            href="./img/logo_small.png"
+            type="image/x-icon"
+        />
+
+        <link rel="stylesheet" href="index.css" />
+        <script src="header.js"></script>
+        <script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="20598d2c-83e0-489d-8de4-fad29b99a122"
+            data-blockingmode="auto"
+            type="text/javascript"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="./index.html"
+                    ><img src="./img/logo.png" alt="Kochwelt Logo"
+                /></a>
+
+                <menu class="burger-menu hidden">
+                    <button
+                        onclick="toggleClass('.burger-menu-dropdown', 'hidden')"
+                        class="burger-menu-btn"
+                    >
+                        ☰
+                    </button>
+                    <ul class="burger-menu-dropdown dropdown-container hidden">
+                        <li>
+                            <a class="green-underline" href="#">Start</a>
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown-burger', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown-burger"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="./pages/rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./pages/rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./pages/rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffeln Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a
+                                class="green-underline"
+                                href="./pages/kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="green-underline"
+                                href="./pages/impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+                <menu>
+                    <ul id="nav-ul">
+                        <li>
+                            <a class="green-underline" href="./index.html"
+                                >Start</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="toggleClass('#rezepte-dropdown', 'hidden')"
+                                class="green-underline"
+                                href="#"
+                                >Rezept des Tages &#9660;</a
+                            >
+                            <ul
+                                id="rezepte-dropdown"
+                                class="dropdown-container hidden"
+                            >
+                                <li>
+                                    <a href="./pages/rezepte/pfannkuchen.html"
+                                        >Pfannkuchen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="./pages/rezepte/apfelstrudel.html"
+                                        >Apfelstrudel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./pages/rezepte/sußkartoffeln-deluxe.html"
+                                        >Süßkartoffeln Deluxe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a
+                                class="green-underline"
+                                href="./pages/kontakt.html"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="green-underline"
+                                href="./pages/impressum.html"
+                                >Impressum</a
+                            >
+                        </li>
+                    </ul>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+            <section class="main-recipe">
+                <img
+                    src="./img/Apfelstrudel.png"
+                    alt="Apfelstrudel"
+                    class="main-img"
+                />
+
+                <div>
+                    <div class="description">
+                        <h1>Apfelstrudel</h1>
+
+                        <p>
+                            Unser Apfelstrudel wird nach altem Familienrezept
+                            hergestellt. Der hauchdünne Teig umschließt eine
+                            Füllung aus saftigen Äpfeln, Rosinen und einer
+                            aromatischen Zimt-Note. Ein Geschmackserlebnis, das
+                            Sie nicht vergessen werden.
+                        </p>
+                    </div>
+                    <a
+                        class="main-recipe-btn"
+                        href="./pages/rezepte/apfelstrudel.html"
+                        >Rezept öffnen</a
+                    >
+                </div>
+            </section>
+
+            <section class="lust-auf-was-neues">
+                <h2>Lust auf was Neues?</h2>
+                <div>
+                    <figure>
+                        <a href="./pages/rezepte/apfelstrudel.html"
+                            ><img
+                                src="./img/Apfelstrudel.png"
+                                alt="Bild von Apfelstrudel mit einem Link zum Rezept."
+                            />
+                            <figcaption>Apfelstrudel</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="./pages/rezepte/pfannkuchen.html">
+                            <img
+                                src="./img/pfannenkuchen.jpg"
+                                alt="Bild von Pfannkuchen mit einem Link zum Rezept"
+                            />
+                            <figcaption>Pfannkuchen</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="./pages/rezepte/sußkartoffeln-deluxe.html">
+                            <img
+                                src="./img/sußkartoffeln-deluxe.png"
+                                alt="Bild von Süßkartoffel Deluxe mit einem Link zum Rezept"
+                            />
+                            <figcaption>Pfannkuchen</figcaption>
+                        </a>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="pfanne-vs-wok">
+                <h3>Pfanne vs. Wok - Was ist besser?</h3>
+                <div>
+                    <p>
+                        Gemüse und Cashewnüssen. Das Rindfleisch ist in dünne
+                        Streifen geschnitten und ist perfekt gegart. Das Gemüse
+                        ist bunt und knackig, und die Cashewnüsse verleihen dem
+                        Gericht eine angenehme Crunchiness. Das Gericht sieht
+                        sehr appetitlich aus und man kann sich vorstellen, wie
+                        lecker es schmeckt.
+                    </p>
+                    <img
+                        src="./img/wokpfanne.png"
+                        alt="Bild von Pfanne mit Gemüse"
+                    />
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#top"
+                ><img src="./img/logo.png" alt="Kochwelt Logo Image"
+            /></a>
+
+            <div>
+                <a href="#"
+                    ><img src="./img/facebook.png" alt="Facebook Logo"
+                /></a>
+                <a href="#"
+                    ><img src="./img/instagram.png" alt="Instagram Logo"
+                /></a>
+                <a href="#"
+                    ><img src="./img/twitter.png" alt="Twitter Logo"
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>
