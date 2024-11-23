@@ -172,6 +172,12 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-weight: 500;
 }
